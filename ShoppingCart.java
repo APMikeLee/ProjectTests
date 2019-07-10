@@ -101,6 +101,7 @@ public class ShoppingCart {
 	            // Apples = $1.00
 	            System.out.println("Apples");
 	            itemPrice = 1.00;
+	                 	
 	     }
 	     if (foodItem == 4){
 	        	//Bread = 80
@@ -116,9 +117,6 @@ public class ShoppingCart {
 	        System.out.println("Enter quantity");
 	        double quantity = input.nextDouble();
 	        
-	        //if(FoodItem == 1 & quantity > 2){
-	        //	System.out.println("Get a Bread Loaf at 1/2 price");
-	        //}
 	        subTotal(quantity, itemPrice);
 	        return quantity;
 	}
@@ -159,7 +157,8 @@ public class ShoppingCart {
 	                	special = 1;
 	                	System.out.println("You have bought two tins buy a bread loaf at half price");
 	                	//IOffer();
-	                	//addProduct1(foodItem); 	 
+	                	//addProduct(product); 
+	                	BuyXItemGetYItemFreeOffer.applyOffer();
 	                }
 	                itemPrice(foodItem);
 	                break;
@@ -168,6 +167,7 @@ public class ShoppingCart {
 	                if(special == 1){
 	                	System.out.println("Your Discount has been Applied 50% of Bread");
 	                	//Condition set for Ioffer 2.
+	                	//BuyXItemGetYItemFreeOffer.apply2Offer();
 	                }
 	                itemPrice(foodItem);
 	                break;
@@ -181,8 +181,8 @@ public class ShoppingCart {
 	                if(weekcount > 1){
 		        		System.out.println("This Week Apples have a discount 10%");
 		        		//Call Method for Ioffer 1.
-		        		//DiscountOnNextItemOffer.applyOffer();
-		        	}   
+		        		//BuyXItemGetYItemFreeOffer.applyOffer();
+	                }   
 	                break;
 	            case 5:
 	                done(runningTotal);
